@@ -33,5 +33,9 @@ echo -e "${BLUE}Populando db...${NF}"
 # then fill
 bash $fill_script > /dev/null 2>&1
 
-echo -e "${GREEN}Base de datos populada con éxito${NF}"
+if [ $? -eq 0 ]; then
+    echo -e "${GREEN}Base de datos populada con éxito${NF}"
+else
+    echo -e "${RED}Error al popular la base de datos${NF}"
+fi
 

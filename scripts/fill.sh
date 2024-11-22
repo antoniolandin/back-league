@@ -12,12 +12,22 @@ parse_json_array() {
     cat $filename | tr -d " " | tr -d "\n" | tr -d "[" | tr -d "]" | sed 's/,{/\n{/g'
 }
 
+# Check if the server is up
+if ! curl -s $API_URL > /dev/null 2>&1; then
+    echo "Server is down."
+    exit 1
+else
+    echo "Server is up"
+fi
+
 # post equipos
 parse_json_array equipos.json | while read line; do
-    curl -s -X POST -H "Content-Type: application/json" -d $line "${API_URL}/equipos" 
+    curl -s -X POST -H "Content-Type: application/json" -d $line "${API_URL}/equipos" > /dev/null 2>&1
 done
 
 # post jugadores
 parse_json_array jugadores.json | while read line; do
-    curl -s -X POST -H "Content-Type: application/json" -d $line "${API_URL}/jugadores" 
+    curl -s -X POST -H "Content-Type: application/json" -d $line "${API_URL}/jugadores" > /dev/null 2>&1
 done
+
+exit 0
