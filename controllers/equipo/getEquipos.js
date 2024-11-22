@@ -5,7 +5,8 @@ const getEquipos = async (req, res) => {
     try {
         // buscar todos los equipos en la base de datos
         const result = Equipos.findAll({order: [
-            ['puntos', 'DESC']
+            ['puntos', 'DESC'],
+            ['goles_diferencia', 'DESC']
         ]}).then(function (result) {
             if (result.length) {
                 res.status(200).json(result)
