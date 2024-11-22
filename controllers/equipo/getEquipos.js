@@ -4,7 +4,9 @@ const handleError = require("../../utils/handleError.js")
 const getEquipos = async (req, res) => {
     try {
         // buscar todos los equipos en la base de datos
-        const result = Equipos.findAll().then(function (result) {
+        const result = Equipos.findAll({order: [
+            ['puntos', 'DESC']
+        ]}).then(function (result) {
             if (result.length) {
                 res.status(200).json(result)
             }
