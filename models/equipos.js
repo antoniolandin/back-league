@@ -27,7 +27,8 @@ module.exports = (sequelize, DataTypes) => {
     empates: DataTypes.INTEGER,
     puntos: DataTypes.INTEGER,
     goles_favor: DataTypes.INTEGER,
-    goles_contra: DataTypes.INTEGER
+    goles_contra: DataTypes.INTEGER,
+    goles_diferencia: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'Equipos',
