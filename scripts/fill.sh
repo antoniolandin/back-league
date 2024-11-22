@@ -9,7 +9,7 @@ script_dir=$(dirname "$(realpath "$0")")
 
 parse_json_array() {
     filename="${script_dir}/${1}"
-    cat $filename | tr -d " " | tr -d "\n" | tr -d "[" | tr -d "]" | sed 's/,{/\n{/g'
+    cat $filename | tr -d '\n' | tr -d '[' | tr -d '\t' | tr -d ']' | sed 's/},/}\n/g' | sed 's/$/\n/g'
 }
 
 # Check if the server is up
@@ -22,12 +22,13 @@ fi
 
 # post equipos
 parse_json_array equipos.json | while read line; do
-    curl -s -X POST -H "Content-Type: application/json" -d $line "${API_URL}/equipos" > /dev/null 2>&1
+    echo $line
+    curl -s -X POST -H "Content-Type: application/json" -d "$line" "${API_URL}/equipos"
 done
 
 # post jugadores
 parse_json_array jugadores.json | while read line; do
-    curl -s -X POST -H "Content-Type: application/json" -d $line "${API_URL}/jugadores" > /dev/null 2>&1
+    curl -s -X POST -H "Content-Type: application/json" -d "$line" "${API_URL}/jugadores"
 done
 
 exit 0
