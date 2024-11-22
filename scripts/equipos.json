@@ -1,29 +1,56 @@
 [
     {
-        "nombre":"MegaFire FC"
+        "id": 1,
+        "nombre":"MegaFire FC",
+        "puntos":12,
+        "goles_diferencia":35
     },
     {
-        "nombre":"Usad Champú FC"
+        "id": 2,
+        "nombre":"Usad Champú FC",
+        "puntos":8,
+        "goles_diferencia":36
     },
     {
-        "nombre":"Tigers FC"
+        "id": 3,
+        "nombre":"Tigers FC",
+        "puntos":7,
+        "goles_diferencia":-2
     },
     {
-        "nombre":"Rayo Cayetano"
+        "id": 4,
+        "nombre":"Rayo Cayetano",
+        "puntos":9,
+        "goles_diferencia":7
     },
     {
-        "nombre":"Rcd Foonctions"
+        "id": 5,
+        "nombre":"Rcd Foonctions",
+        "puntos":6,
+        "goles_diferencia":7
     },
     {
-        "nombre":"Raimon mp3"
+        "id": 6,
+        "nombre":"Raimon mp3",
+        "puntos":3,
+        "goles_diferencia":-56
     },
     {
-        "nombre":"Wolfram City"
+        "id": 7,
+        "nombre":"Wolfram City",
+        "puntos":9,
+        "goles_diferencia":16
     },
     {
-        "nombre":"Utad Lions"
+        "id": 8,
+        "nombre":"Utad Lions",
+        "puntos":3,
+        "goles_diferencia":-2
     },
     {
-        "nombre":"Liencres FC"
+        "id": 9,
+        "nombre":"Liencres FC",
+        "puntos":3,
+        "goles_diferencia":-14
     }
 ]

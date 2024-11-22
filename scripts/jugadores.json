@@ -1,0 +1,23 @@
+[
+    {
+        "id_equipo": "6",
+        "nombre": "Antonio",
+        "primer_apellido": "Cabrera",
+        "goles": 1,
+        "partidos_jugados": 2
+    },
+    {
+        "id_equipo": "6",
+        "nombre": "Álvaro",
+        "primer_apellido": "Salís",
+        "goles": 0,
+        "partidos_jugados": 2
+    },
+    {
+        "id_equipo": "6",
+        "nombre": "Antonio",
+        "primer_apellido": "Pérez",
+        "goles": 2,
+        "partidos_jugados": 2
+    }
+]
