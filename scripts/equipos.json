@@ -3,54 +3,63 @@
         "id": 1,
         "nombre":"MegaFire FC",
         "puntos":12,
-        "goles_diferencia":35
+        "goles_diferencia":35,
+        "partidos_jugados":4
     },
     {
         "id": 2,
         "nombre":"Usad Champú FC",
         "puntos":8,
-        "goles_diferencia":36
+        "goles_diferencia":36,
+        "partidos_jugados":3
     },
     {
         "id": 3,
         "nombre":"Tigers FC",
         "puntos":7,
-        "goles_diferencia":-2
+        "goles_diferencia":-2,
+        "partidos_jugados":4
     },
     {
         "id": 4,
         "nombre":"Rayo Cayetano",
         "puntos":9,
-        "goles_diferencia":7
+        "goles_diferencia":7,
+        "partidos_jugados":4
     },
     {
         "id": 5,
         "nombre":"Rcd Foonctions",
         "puntos":6,
-        "goles_diferencia":7
+        "goles_diferencia":7,
+        "partidos_jugados":4
     },
     {
         "id": 6,
         "nombre":"Raimon mp3",
         "puntos":3,
-        "goles_diferencia":-56
+        "goles_diferencia":-56,
+        "partidos_jugados":4
     },
     {
         "id": 7,
         "nombre":"Wolfram City",
         "puntos":9,
-        "goles_diferencia":16
+        "goles_diferencia":16,
+        "partidos_jugados":3
     },
     {
         "id": 8,
         "nombre":"Utad Lions",
         "puntos":3,
-        "goles_diferencia":-2
+        "goles_diferencia":-2,
+        "partidos_jugados":2
     },
     {
         "id": 9,
         "nombre":"Liencres FC",
         "puntos":3,
-        "goles_diferencia":-14
+        "goles_diferencia":-14,
+        "partidos_jugados":3
     }
 ]
