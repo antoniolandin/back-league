@@ -5,8 +5,6 @@ const postJugador = async (req, res) => {
     try {
         const body = req.body
 
-        console.log(body)
-        
         // si el id no es numérico devolver error
         if (!body) {
             handleError(res, "Los datos del jugador están vacíos", 400)
