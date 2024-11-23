@@ -7,9 +7,9 @@
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "league_test",
+    "username": "antonio",
+    "password": "pepsicola",
+    "database": "league_development",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
