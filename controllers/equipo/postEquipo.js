@@ -1,9 +1,10 @@
+const { matchedData } = require("express-validator")
 const { Equipos } = require("../../models")
 const handleError = require("../../utils/handleError.js")
 
 const postEquipo = async (req, res) => {
     try {
-        const body = req.body
+        const body = matchedData(req)
 
         console.log(body)
         
