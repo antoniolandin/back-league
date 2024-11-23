@@ -16,15 +16,34 @@ const signup = async (req, res) => {
         // especificamos el salteo de la contraseña
         const saltRounds = 5
 
-        // Hash the password
+        const nombre_minusculas = body.nombre.toLowerCase()
+
+        // comprobamos que el nombre no esté cogido
+        const usuario = await Usuarios.findOne({
+            where: {
+                nombre: nombre_minusculas
+            }
+        })
+        
+        // si el nombre ya está en uso mandamos error
+        if (usuario) {
+            console.log(`Error: ya existe el usuario ${body.nombre}`)
+            handleError(res, `Error: ya existe el usuario ${body.nombre}`, 400)
+            return
+        }
+
+        // hasheamos la contraseña
         bcrypt.hash(body.contraseña, saltRounds, (error, hash) => {
             if (error) {
                 console.error('Error hasheando la contraseña:', error);
                 handleError(res, error, 400)
             } else {
-                // creamos el usuario final que tendrá la contraseña hasheada
+                // creamos el usuario
                 let usuario_final = { ...body }
+
+                // cambiamos su nombre y contraseña
                 usuario_final.contraseña = hash
+                usuario_final.nombre = nombre_minusculas
 
                 // creamos el jugador en la base de datos
                 Usuarios.create(usuario_final).then((data) => {
