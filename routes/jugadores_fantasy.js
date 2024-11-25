@@ -1,6 +1,6 @@
 const express = require("express")
 const { getJugador, getJugadores, postJugador } = require("../controllers/jugador_fantasy")
-const { validatorCreateJugadorFantasy } = require("../validators/jugadores_fantasy")
+const { validatorCreateJugadorFantasy } = require("../validators")
 
 const router = express.Router()
 

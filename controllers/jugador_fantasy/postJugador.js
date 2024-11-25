@@ -1,3 +1,5 @@
+const { matchedData } = require("express-validator")
+
 const { jugadores_fantasy } = require("../../models")
 const { equipos_fantasy } = require("../../models/equipos_fantasy")
 const { Jugadores } = require("../../models/jugadores")
@@ -6,7 +8,7 @@ const handleError = require("../../utils/handleError")
 
 const postJugador = async (req, res) => {
     try {
-        const body = req.body
+        const body = matchedData(req)
 
         const equipo = await equipos_fantasy.findByPK(body.id_equipo_fantasy)
 
