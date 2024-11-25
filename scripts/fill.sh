@@ -31,4 +31,14 @@ parse_json_array jugadores.json | while read line; do
     curl -s -X POST -H "Content-Type: application/json" -d "$line" "${API_URL}/jugadores"
 done
 
+# post equipos_fantasy
+parse_json_array equipos_fantasy.json | while read line; do
+    curl -s -X POST -H "Content-Type: application/json" -d "$line" "${API_URL}/equipos_fantasy"
+done
+
+# post jugadores_fantasy
+parse_json_array jugadores_fantasy.json | while read line; do
+    curl -s -X POST -H "Content-Type: application/json" -d "$line" "${API_URL}/jugadores_fantasy"
+done
+
 exit 0

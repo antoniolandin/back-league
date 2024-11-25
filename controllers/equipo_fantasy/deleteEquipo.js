@@ -1,4 +1,4 @@
-const { equipos_fantasy } = require("../../models/equipos_fantasy")
+const { equipos_fantasy } = require("../../models")
 const handleError = require("../../utils/handleError")
 
 const deleteEquipo = async (req, res) => {
