@@ -17,19 +17,19 @@ const signup = async (req, res) => {
         // especificamos el salteo de la contraseña
         const saltRounds = 5
 
-        const nombre_minusculas = body.nombre.toLowerCase()
+        const email_minusculas = body.email.toLowerCase()
 
-        // comprobamos que el nombre no esté cogido
+        // comprobamos que el email no esté cogido
         const usuario = await Usuarios.findOne({
             where: {
-                nombre: nombre_minusculas
+                email: email_minusculas
             }
         })
 
-        // si el nombre ya está en uso mandamos error
+        // si el email ya está en uso mandamos error
         if (usuario) {
-            console.log(`Error: ya existe el usuario ${body.nombre}`)
-            handleError(res, `Error: ya existe el usuario ${body.nombre}`, 400)
+            console.log(`Error: el email ${body.email} ya está en uso`)
+            handleError(res, `Error: el email ${body.email} ya está en uso`, 400)
             return
         }
 
@@ -42,13 +42,13 @@ const signup = async (req, res) => {
                 // creamos el usuario
                 let usuario_final = { ...body }
 
-                // cambiamos su nombre y contraseña
+                // cambiamos su email y contraseña
                 usuario_final.contraseña = hash
-                usuario_final.nombre = nombre_minusculas
+                usuario_final.email = email_minusculas
                 
                 // creamos el token jwt
                 const token = jwt.sign(
-                    {id: usuario_final.id, nombre: usuario_final.nombre},
+                    {id: usuario_final.id, email: usuario_final.email},
                     process.env.JWT_SECRET_KEY,
                     {
                         expiresIn: "60min",

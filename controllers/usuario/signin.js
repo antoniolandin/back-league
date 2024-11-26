@@ -5,24 +5,24 @@ const jwt = require('jsonwebtoken')
 
 const signin = async (req, res) => {
     try {
-        const nombre = req.body.nombre
+        const email = req.body.email
         const contraseña = req.body.contraseña
 
         // si no hay body, mostrar error
-        if (!nombre || !contraseña) {
+        if (!email || !contraseña) {
             console.log("Error: Los datos del usuario no pueden estar vacíos")
             handleError(res, "Los datos del usuario no pueden estar vacíos", 400)
             return
         }
 
-        // comprobamos que el nombre no esté cogido
+        // comprobamos que el email no esté cogido
         const usuario = await Usuarios.findOne({
             where: {
-                nombre: nombre
+                email: email
             }
         })
 
-        // si el nombre ya está en uso mandamos error
+        // si el email ya está en uso mandamos error
         if (!usuario) {
             console.log("Usuario no encontrado")
             handleError(res, "Usuario no encontrado", 404)
@@ -32,7 +32,7 @@ const signin = async (req, res) => {
         // si las constraseñas coinciden
         if (bcrypt.compare(contraseña, usuario.contraseña)) {
             const token = jwt.sign(
-                { id: usuario.id, nombre: usuario.nombre },
+                { id: usuario.id, email: usuario.email },
                 process.env.JWT_SECRET_KEY,
                 {
                     expiresIn: "60min",
