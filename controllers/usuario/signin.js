@@ -30,7 +30,7 @@ const signin = async (req, res) => {
         }
 
         // si las constraseñas coinciden
-        if (bcrypt.compare(contraseña, usuario.constraseña)) {
+        if (bcrypt.compare(contraseña, usuario.contraseña)) {
             const token = jwt.sign(
                 { id: usuario.id, nombre: usuario.nombre },
                 process.env.JWT_SECRET_KEY,
