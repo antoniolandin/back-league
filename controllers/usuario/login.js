@@ -3,7 +3,7 @@ const handleError = require("../../utils/handleError.js")
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
-const login = async (req, res) => {
+const signin = async (req, res) => {
     try {
         const nombre = req.body.nombre
         const contraseña = req.body.contraseña
@@ -54,4 +54,4 @@ const login = async (req, res) => {
     }
 }
 
-module.exports = login
+module.exports = signin
