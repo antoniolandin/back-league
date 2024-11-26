@@ -1,6 +1,7 @@
 const { Usuarios } = require("../../models")
 const handleError = require("../../utils/handleError.js")
 const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 
 const signup = async (req, res) => {
     try {
@@ -24,7 +25,7 @@ const signup = async (req, res) => {
                 nombre: nombre_minusculas
             }
         })
-        
+
         // si el nombre ya está en uso mandamos error
         if (usuario) {
             console.log(`Error: ya existe el usuario ${body.nombre}`)
@@ -44,11 +45,23 @@ const signup = async (req, res) => {
                 // cambiamos su nombre y contraseña
                 usuario_final.contraseña = hash
                 usuario_final.nombre = nombre_minusculas
+                
+                // creamos el token jwt
+                const token = jwt.sign(
+                    {id: usuario_final.id, nombre: usuario_final.nombre},
+                    process.env.JWT_SECRET_KEY,
+                    {
+                        expiresIn: "60min",
+                    }
+                ) 
 
                 // creamos el jugador en la base de datos
-                Usuarios.create(usuario_final).then((data) => {
+                Usuarios.create(usuario_final).then((usr) => {
                     // respondemos con el usuario creado
-                    res.status(201).json(data)
+                    res.status(201).json({
+                        usuario: usr,
+                        token: token
+                    })
                 }).catch((error) => {
                     console.error('Error subiendo usuario a la db:', error);
                     handleError(res, error, 400)
