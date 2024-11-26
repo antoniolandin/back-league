@@ -11,7 +11,8 @@ const validatorRegister = [
         isEmail().withMessage("El email es incorrecto"),
 
     check('contraseña').exists().withMessage("La contraseña es obligatoria").
-        notEmpty().withMessage("La contraseña no puede estar vacía"),
+        notEmpty().withMessage("La contraseña no puede estar vacía").
+        isLength({ max: 50, min: 3 }).withMessage("La contraseña tiene que tener entre 3 y 50 carácteres"),
 
     (req, res, next) => {
         return validateResults(req, res, next)
