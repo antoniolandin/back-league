@@ -1,6 +1,6 @@
-const handleError = (res, message, code) => {
+const handleError = (res, msg, code) => {
     // Enviamos al cliente un mensaje de error
-    res.status(code).json({ message })
+    res.status(code).json({ msg })
 }
 
 module.exports = handleError
