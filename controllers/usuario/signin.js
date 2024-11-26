@@ -30,24 +30,31 @@ const signin = async (req, res) => {
         }
 
         // si las constraseñas coinciden
-        if (bcrypt.compare(contraseña, usuario.contraseña)) {
-            const token = jwt.sign(
-                { id: usuario.id, email: usuario.email },
-                process.env.JWT_SECRET_KEY,
-                {
-                    expiresIn: "60min",
-                }
-            )
+        bcrypt.compare(contraseña, usuario.contraseña, (err, data) => {
+            if (err) {
+                console.log(err)
+                handleError(res, err, 400)
+            }
+            else if (data) {
+                const token = jwt.sign(
+                    { id: usuario.id, email: usuario.email },
+                    process.env.JWT_SECRET_KEY,
+                    {
+                        expiresIn: "60min",
+                    }
+                )
 
-            res.status(200).json({
-                usuario: usuario,
-                token: token
-            })
-        }
-        else {
-            console.log("Credenciales incorrectas")
-            handleError(res, "Crendeciales incorrectas", 400)
-        }
+                res.status(200).json({
+                    usuario: usuario,
+                    token: token
+                })
+            }
+            else {
+                console.log("Credenciales incorrectas")
+                handleError(res, "Crendeciales incorrectas", 400)
+            }
+
+        })
     } catch (error) {
         console.log(error)
         handleError(res, error, 400)
