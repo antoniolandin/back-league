@@ -1,23 +1,58 @@
 [
-    {
-        "id_equipo": 7,
-        "nombre": "Antonio",
-        "primer_apellido": "Cabrera",
-        "goles": 1,
-        "partidos_jugados": 2
-    },
-    {
-        "id_equipo": 7,
-        "nombre": "Álvaro",
-        "primer_apellido": "Salís",
-        "goles": 0,
-        "partidos_jugados": 2
-    },
-    {
-        "id_equipo": 7,
-        "nombre": "Antonio",
-        "primer_apellido": "Pérez",
-        "goles": 2,
-        "partidos_jugados": 2
-    }
+  {
+    "id_equipo": 7,
+    "nombre": "Antonio",
+    "primer_apellido": "Cabrera",
+    "goles": 1,
+    "curso ": "MAIS",
+    "partidos_jugados": 2
+  },
+  {
+    "id_equipo": 7,
+    "nombre": "Álvaro",
+    "primer_apellido": "Salís",
+    "goles": 3,
+    "curso": "MAIS",
+    "partidos_jugados": 2
+  },
+  {
+    "id_equipo": 7,
+    "nombre": "Antonio",
+    "primer_apellido": "Pérez",
+    "goles": 2,
+    "curso": "MAIS",
+    "partidos_jugados": 2
+  },
+  {
+    "id_equipo": 7,
+    "nombre": "Alex",
+    "primer_apellido": "Oranges",
+    "goles": 0,
+    "curso": "MAIS",
+    "partidos_jugados": 2
+  },
+  {
+    "id_equipo": 7,
+    "nombre": "Temés",
+    "primer_apellido": "",
+    "goles": 3,
+    "curso": "Desconocido",
+    "partidos_jugados": 2
+  },
+  {
+    "id_equipo": 7,
+    "nombre": "Toño",
+    "primer_apellido": "",
+    "goles": 4,
+    "curso": "Desconocido",
+    "partidos_jugados": 2
+  },
+  {
+    "id_equipo": 7,
+    "nombre": "Carlos",
+    "primer_apellido": "",
+    "goles": 3,
+    "curso": "INSO",
+    "partidos_jugados": 2
+  }
 ]
