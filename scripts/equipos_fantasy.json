@@ -1,0 +1,23 @@
+[
+    {
+        "nombre": "Dragones Rojos",
+        "id_user": 1,
+        "puntos": 150
+    },
+    {
+        "nombre": "Tigres Dorados",
+        "id_user": 2,
+        "puntos": 200
+    },
+    {
+        "nombre": "Fénix Oscuro",
+        "id_user": 3,
+        "puntos": 120
+    },
+    {
+        "nombre": "Leones de Acero",
+        "id_user": 4,
+        "puntos": 180
+    }
+]
+
