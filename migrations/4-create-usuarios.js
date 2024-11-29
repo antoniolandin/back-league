@@ -35,7 +35,7 @@ module.exports = {
             cartera: {
                 type: Sequelize.FLOAT,
                 defaultValue: 500
-            }
+            },
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE

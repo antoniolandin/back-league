@@ -23,11 +23,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER
     },
     nombre: DataTypes.STRING,
-    id_usuario: DataTypes.INTEGER,
     puntos: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'equipos_fantasy',
+    modelName: 'FantasyEquipos',
   });
   return FantasyEquipos;
 };

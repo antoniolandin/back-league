@@ -13,17 +13,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
-      id_usuario: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-        references: {
-            model: {
-                tableName: 'Usuarios'
-            },
-            key: 'id',
-        },
-        onUpdate: "CASCADE"
-      },
       puntos: {
         type: Sequelize.INTEGER
       },
