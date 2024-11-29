@@ -22,6 +22,10 @@ module.exports = {
                 type: Sequelize.STRING,
                 allowNull: false
             },
+            cartera: {
+                type: Sequelize.FLOAT,
+                defaultValue: 500
+            }
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE

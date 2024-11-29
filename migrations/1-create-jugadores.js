@@ -43,6 +43,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         defaultValue: 0
       },
+      precio: {
+        type: Sequelize.FLOAT,
+        defaultValue: 50
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
