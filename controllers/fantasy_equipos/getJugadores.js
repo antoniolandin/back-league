@@ -1,4 +1,4 @@
-const { jugadores_fantasy, equipos_fantasy } = require("../../models")
+const { fantasy_equipos, Jugadores } = require("../../models")
 const handleError = require("../../utils/handleError")
 
 const getJugadores = async (req, res) => {

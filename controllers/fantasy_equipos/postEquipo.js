@@ -1,5 +1,5 @@
 const { matchedData } = require("express-validator")
-const { equipos_fantasy } = require("../../models")
+const { fantasy_equipos } = require("../../models")
 const { Usuarios } = require("../../models")
 const handleError = require("../../utils/handleError")
 
