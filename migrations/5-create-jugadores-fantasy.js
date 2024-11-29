@@ -17,7 +17,8 @@ module.exports = {
                 tableName: 'FantasyEquipos'
             },
             key: 'id'
-        }
+        },
+        onUpdate: "CASCADE"
       },
       id_jugador: {
         type: Sequelize.INTEGER,
@@ -27,7 +28,8 @@ module.exports = {
                 tableName: 'Jugadores'
             },
             key: 'id'
-        }
+        },
+        onUpdate: "CASCADE"
       },
       puntos_jornada: {
         type: Sequelize.INTEGER,
