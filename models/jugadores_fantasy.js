@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class FantasyJugadores extends Model {
+  class jugadores_fantasy extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,17 +11,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      FantasyJugadores.hasMany(models.Jugadores, {foreignKey: 'id_jugador', as: 'jugador'})
-      FantasyJugadores.hasMany(models.FantasyEquipos, {foreignKey: 'id_equipo_fantasy', as: 'equipo'})
     }
   }
-  FantasyJugadores.init({
+  jugadores_fantasy.init({
     id_equipo_fantasy: DataTypes.INTEGER,
     id_jugador: DataTypes.INTEGER,
     puntos_jornada: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'FantasyJugadores',
+    modelName: 'jugadores_fantasy',
   });
-  return FantasyJugadores;
+  return jugadores_fantasy;
 };

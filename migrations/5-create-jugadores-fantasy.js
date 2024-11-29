@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('FantasyJugadores', {
+    await queryInterface.createTable('jugadores_fantasies', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -32,8 +32,7 @@ module.exports = {
         onUpdate: "CASCADE"
       },
       puntos_jornada: {
-        type: Sequelize.INTEGER,
-        defaultValue: 0
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
@@ -46,6 +45,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('FantasyJugadores');
+    await queryInterface.dropTable('jugadores_fantasies');
   }
 };
