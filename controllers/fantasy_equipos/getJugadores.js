@@ -1,4 +1,4 @@
-const { fantasy_equipos, Jugadores } = require("../../models")
+const { FantasyEquipos, FantasyJugadores } = require("../../models")
 const handleError = require("../../utils/handleError")
 
 const getJugadores = async (req, res) => {
@@ -10,14 +10,14 @@ const getJugadores = async (req, res) => {
             return
         }
 
-        const equipo = await equipos_fantasy.findByPk(id_equipo)
+        const equipo = await FantasyEquipos.findByPk(id_equipo)
 
         if (!equipo) {
             handleError(res, "El equipo no existe", 404)
             return
         }
 
-        const result = jugadores_fantasy.findAll({ where: { id_equipo: id_equipo } }).then(function (result) {
+        const result = FantasyJugadores.findAll({ where: { id_equipo: id_equipo } }).then(function (result) {
             if (result.length > 0) {
                 res.status(200).json(result)
             } else {

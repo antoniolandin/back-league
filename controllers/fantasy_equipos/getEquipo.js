@@ -1,10 +1,10 @@
-const { fantasy_equipos } = require('../../models')
+const { FantasyEquipos } = require('../../models')
 const handleError = require('../../utils/handleError')
 
 const getEquipo = async (req, res) => {
     const id = req.params.id
 
-    const result = equipos_fantasy.findByPk(id).then(function (result) {
+    const result = FantasyEquipos.findByPk(id).then(function (result) {
         if (result) {
             res.status(200).json(result)
         } else {

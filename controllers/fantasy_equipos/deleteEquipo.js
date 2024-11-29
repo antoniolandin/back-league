@@ -1,10 +1,10 @@
-const { fantasy_equipos } = require("../../models")
+const { FantasyEquipos } = require("../../models")
 const handleError = require("../../utils/handleError")
 
 const deleteEquipo = async (req, res) => {
     try {
         const id = req.params.id
-        const result = await equipos_fantasy.destroy({
+        const result = await FantasyEquipos.destroy({
             where: {
                 id: id,
             },

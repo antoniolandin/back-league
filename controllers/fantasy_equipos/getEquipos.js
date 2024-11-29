@@ -1,9 +1,9 @@
-const { fantasy_equipos } = require("../../models")
+const { FantasyEquipos } = require("../../models")
 const handleError = require("../../utils/handleError")
 
 const getEquipos = async (req, res) => {
     try {
-        const result = await equipos_fantasy.findAll({
+        const result = await FantasyEquipos.findAll({
             order: ['puntos', 'DESC']
         }).then(function (result) {
             if (result.length > 0) {
