@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Usuarios.hasOne(models.FantasyEquipos, {foreignKey: 'id_equipo_fantasy', as: 'fantasy'})
     }
   }
   Usuarios.init({
@@ -20,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
         type: DataTypes.INTEGER
     },
+    id_equipo_fantasy: DataTypes.INTEGER,
     nombre: DataTypes.STRING,
     email: DataTypes.STRING,
     contraseña: DataTypes.STRING,

@@ -9,6 +9,16 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
+            id_equipo_fantasy: {
+                type: Sequelize.INTEGER,
+                references: {
+                    model: {
+                        tableName: 'FantasyEquipos'
+                    },
+                    key: 'id'
+                },
+                onUpdate: "CASCADE"
+            },
             nombre: {
                 type: Sequelize.STRING,
                 allowNull: false
