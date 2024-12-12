@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  equipos_partidos.init({
+  EquiposPartidos.init({
     id_partido: DataTypes.INTEGER,
     id_equipo: DataTypes.INTEGER,
     goles: DataTypes.INTEGER
