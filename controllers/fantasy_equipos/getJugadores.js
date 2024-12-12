@@ -11,14 +11,15 @@ const getJugadores = async (req, res) => {
         }
 
         const equipo = await FantasyEquipos.findByPk(id_equipo)
-        const jugadores = await equipo.getJugadores()
-
-        console.log(jugadores)
-
+        
         if (!equipo) {
             handleError(res, "El equipo no existe", 404)
             return
         }
+
+        const jugadores = await equipo.getJugadores()
+
+        console.log(jugadores)
 
         //const result = Jugadores.findAll
     } catch (err) {
