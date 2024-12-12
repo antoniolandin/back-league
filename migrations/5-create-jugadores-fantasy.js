@@ -10,10 +10,26 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       id_equipo_fantasy: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+            model: {
+                tableName: 'FantasyEquipos'
+            },
+            key: 'id'
+        },
+        onUpdate: "CASCADE",
+        allowNull: false
       },
       id_jugador: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+            model: {
+                tableName: 'Jugadores'
+            },
+            key: 'id'
+        },
+        onUpdate: "CASCADE",
+        allowNull: false
       },
       puntos_jornada: {
         type: Sequelize.INTEGER
