@@ -2,9 +2,7 @@ const { check } = require('express-validator');
 const validateResults = require('../utils/handleValidator');
 
 const validatorCreateEquipo = [
-    check('nombre').exists().notEmpty(),
-    check('nombre').isLength({ max: 15 }),
-    check('nombre').isLength({ min: 3 }),
+    check('nombre').exists().notEmpty().isLength({ max: 15 }).isLength({ min: 3 }),
     check('partidos_jugados'),
     check('victorias'),
     check('derrotas'),
