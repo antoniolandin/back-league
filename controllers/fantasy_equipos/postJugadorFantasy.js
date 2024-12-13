@@ -5,18 +5,24 @@ const postJugadorFantasy = async (req, res) => {
     try {
         const { id_equipo } = req.params.id_equipo
         const { id_jugador } = req.params.id_jugador
+        const { id_usuario } = req.dataToken.id
 
         if (!Jugadores.findByPk(id_jugador)) {
             handleError(res, "El jugador no existe", 404)
             return
         }
 
-        if (!FantasyEquipos.findByPk(id_equipo)) {
+        const equipo = await FantasyEquipos.findByPk(id_equipo)
+
+        if (!equipo) {
             handleError(res, "El equipo no existe", 404)
             return
         }
 
-        const equipo = await FantasyEquipos.findByPk(id_equipo)
+        if (equipo.id_usuario != id_usuario) {
+            handleError(res, "El equipo no pertenece al usuario", 400)
+            return
+        }
 
         const result = await equipo.addJugador(id_jugador).then(function (result) {
             if (result) {

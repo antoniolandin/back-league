@@ -1,15 +1,23 @@
 const { matchedData } = require("express-validator")
-const { FantasyEquipos } = require("../../models")
+const { FantasyEquipos, Usuarios } = require("../../models")
 const handleError = require("../../utils/handleError")
 
 const postEquipo = async (req, res) => {
     try {
         const body = matchedData(req)
+        const id = req.dataToken.id
+
+        if (!Usuarios.findByPk(id)) {
+            handleError(res, "El usuario no existe", 404)
+            return
+        }
 
         if (!body) {
             handleError(res, "Los datos del equipo deben estar completos", 400)
             return
         }
+
+        body.id_usuario = id
 
         const result = await FantasyEquipos.create(body).then(function (result) {
             if (result) {
