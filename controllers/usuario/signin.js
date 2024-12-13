@@ -28,7 +28,7 @@ const signin = async (req, res) => {
             handleError(res, "Usuario no encontrado", 404)
             return
         }
-
+        
         // si las constraseñas coinciden
         bcrypt.compare(contraseña, usuario.contraseña, (err, data) => {
             if (err) {
@@ -43,7 +43,6 @@ const signin = async (req, res) => {
                         expiresIn: "60min",
                     }
                 )
-
                 res.status(200).json({
                     usuario: usuario,
                     token: token

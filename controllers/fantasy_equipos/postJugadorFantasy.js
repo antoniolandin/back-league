@@ -5,7 +5,7 @@ const postJugadorFantasy = async (req, res) => {
     try {
         const { id_equipo } = req.params.id_equipo
         const { id_jugador } = req.params.id_jugador
-        const { id_usuario } = req.dataToken.id
+        const { id_usuario } = req.user.id
 
         if (!Jugadores.findByPk(id_jugador)) {
             handleError(res, "El jugador no existe", 404)

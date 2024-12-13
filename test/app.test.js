@@ -3,8 +3,9 @@ const app = require("../app")
 
 var id_equipo = null
 var id_jugador = null
+var id_usuario = null
 
-var token = null
+var token = ''
 
 describe("Tests Equipos", () => {
 
@@ -89,8 +90,6 @@ describe("Tests Users", () => {
             .expect(201)
 
         expect(response.body.usuario.email).toEqual("antonio@gmail.com")
-
-        token = response.body.token
     })
 
     it("should login a user", async () => {
@@ -101,7 +100,20 @@ describe("Tests Users", () => {
             .expect(200)
         
         expect(response.body.usuario.email).toEqual("antonio@gmail.com")
+
+        id_usuario = response.body.usuario.id
+        token = response.body.token
     })
 })
 
+describe("Tests fantasy teams", () => {
+    it("should create a fantasy team", async () => {
+        const response = await request(app)
+            .post("/api/fantasy_equipos")
+            .send({ nombre: "Fantasy Test" })
+            .set("Authorization", "Bearer " + token)
+            .expect(201)
 
+        expect(response.body.id_usuario).toEqual(id_usuario)
+    })
+})

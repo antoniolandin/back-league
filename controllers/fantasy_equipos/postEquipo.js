@@ -5,7 +5,8 @@ const handleError = require("../../utils/handleError")
 const postEquipo = async (req, res) => {
     try {
         const body = matchedData(req)
-        const id = req.dataToken.id
+        console.log(req)
+        const id = req.user.id
 
         if (!Usuarios.findByPk(id)) {
             handleError(res, "El usuario no existe", 404)

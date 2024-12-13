@@ -45,7 +45,7 @@ const signup = async (req, res) => {
                 // cambiamos su email y contraseña
                 usuario_final.contraseña = hash
                 usuario_final.email = email_minusculas
-                
+
                 // creamos el token jwt
                 const token = jwt.sign(
                     {id: usuario_final.id, email: usuario_final.email},
