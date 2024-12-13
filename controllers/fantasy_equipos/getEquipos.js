@@ -3,7 +3,9 @@ const handleError = require("../../utils/handleError")
 
 const getEquipos = async (req, res) => {
     try {
-        const result = await FantasyEquipos.findAll().then(function (result) {
+        const result = await FantasyEquipos.findAll({
+            order: [['puntos', 'DESC']]
+        }).then(function (result) {
             if (result.length > 0) {
                 res.status(200).json(result)
             } else {
