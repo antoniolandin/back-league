@@ -40,7 +40,8 @@ const signin = async (req, res) => {
                     { id: usuario.id, email: usuario.email },
                     process.env.JWT_SECRET_KEY,
                     {
-                        expiresIn: "60min",
+                        expiresIn: "1h",
+                        algorithm: "HS256"
                     }
                 )
                 res.status(200).json({

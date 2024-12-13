@@ -4,26 +4,23 @@ const handleError = require("../utils/handleError")
 const authMiddleware = async (req, res, next) => {
     try {
         const authHeader = req.headers.authorization
-        const token = authHeader && authHeader.split(" ")[1]
-        
-        if (!token || token == "Bearer") {
-            handleError(res, "Not a token", 401)
-            return
+
+        if (!authHeader) {
+            return handleError(res, "No token provided", 401)
         }
 
-        console.log(await jwt.verify(token, process.env.JWT_SECRET))
-        //const dataToken = await jwt.verify(token, process.env.JWT_SECRET)
-            /*, (err, data) => {
-            if (err) {
-                handleError(res, "Invalid token", 401)
-                return
-            }
+        const token = authHeader.split(" ")[1]
 
-            console.log(data)
+        if (!token) {
+            return handleError(res, "Invalid token format", 401)
+        }
 
-            req.user = data
-            next()
-        })*/
+        const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY, { algorithms: ["HS256"] })
+        
+        req.user = decoded
+        console.log("Decoded Token:", decoded)
+
+        next();
     } catch (error) {
         handleError(res, error.message, 500)
     }

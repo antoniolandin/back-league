@@ -110,10 +110,19 @@ describe("Tests fantasy teams", () => {
     it("should create a fantasy team", async () => {
         const response = await request(app)
             .post("/api/fantasy_equipos")
+            .set("Authorization", `Bearer ${token}`)
             .send({ nombre: "Fantasy Test" })
-            .set("Authorization", "Bearer " + token)
-            .expect(201)
+            .expect(200)
 
         expect(response.body.id_usuario).toEqual(id_usuario)
+    })
+
+    it("should get all fantasy teams", async () => {
+        const response = await request(app)
+            .get("/api/fantasy_equipos")
+            .set("Accept", "application/json")
+            .expect(200)
+
+        expect(response.body.pop().id_usuario).toEqual(id_usuario)
     })
 })

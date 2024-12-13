@@ -51,7 +51,8 @@ const signup = async (req, res) => {
                     {id: usuario_final.id, email: usuario_final.email},
                     process.env.JWT_SECRET_KEY,
                     {
-                        expiresIn: "60min",
+                        expiresIn: "1h",
+                        algorithm: "HS256"
                     }
                 ) 
 
