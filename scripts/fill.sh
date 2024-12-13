@@ -21,19 +21,19 @@ else
 fi
 
 # post equipos
-parse_json_array equipos.json | while read line; do
+parse_json_array json_files/equipos.json | while read line; do
     echo $line
     curl -s -X POST -H "Content-Type: application/json" -d "$line" "${API_URL}/equipos"
 done
 
 # post jugadores
-parse_json_array jugadores.json | while read line; do
+parse_json_array json_files/jugadores.json | while read line; do
     curl -s -X POST -H "Content-Type: application/json" -d "$line" "${API_URL}/jugadores"
 done
 
 # post equipos fantasy
-parse_json_array fantasy_equipos.json | while read line; do
-    curl -s -X POST -H "Content-Type: application/json" -d "$line" "${API_URL}/fantasy_equipos"
-done
+#parse_json_array json_files/fantasy_equipos.json | while read line; do
+#    curl -s -X POST -H "Authorization: Bearer ${token}" -d "$line" "${API_URL}/fantasy_equipos"
+#done
 
 exit 0

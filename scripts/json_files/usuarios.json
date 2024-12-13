@@ -1,0 +1,28 @@
+[
+    {
+        "nombre": "Juan Pérez",
+        "email": "juan.perez@example.com",
+        "contraseña": "12345abc"
+    },
+    {
+        "nombre": "María López",
+        "email": "maria.lopez@example.com",
+        "contraseña": "password123"
+    },
+    {
+        "nombre": "Carlos García",
+        "email": "carlos.garcia@example.com",
+        "contraseña": "securePass!789"
+    },
+    {
+        "nombre": "Ana Torres",
+        "email": "ana.torres@example.com",
+        "contraseña": "Torres2024!"
+    },
+    {
+        "nombre": "Luis Fernández",
+        "email": "luis.fernandez@example.com",
+        "contraseña": "Fernandez$456"
+    }
+]
+
