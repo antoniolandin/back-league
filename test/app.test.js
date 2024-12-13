@@ -123,7 +123,7 @@ describe("Tests fantasy teams", () => {
     it("should get all fantasy teams", async () => {
         const response = await request(app)
             .get("/api/fantasy_equipos")
-            .set("Accept", "application/json")
+            .set("Authorization", `Bearer ${token}`)
             .expect(200)
 
         expect(response.body.pop().id_usuario).toEqual(id_usuario)
@@ -152,7 +152,7 @@ describe("Tests fantasy teams", () => {
     it("should get all players of a fantasy team", async () => {
         const response = await request(app)
             .get("/api/fantasy_equipos/" + id + "/jugadores/")
-            .set("Accept", "application/json")
+            .set("Authorization", `Bearer ${token}`)
             .expect(200)
         
         expect(response.body.pop().id).toEqual(id_jugador)
