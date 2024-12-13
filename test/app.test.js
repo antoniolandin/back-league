@@ -107,6 +107,8 @@ describe("Tests Users", () => {
 })
 
 describe("Tests fantasy teams", () => {
+    var id = null
+
     it("should create a fantasy team", async () => {
         const response = await request(app)
             .post("/api/fantasy_equipos")
@@ -115,6 +117,7 @@ describe("Tests fantasy teams", () => {
             .expect(200)
 
         expect(response.body.id_usuario).toEqual(id_usuario)
+        id = response.body.id
     })
 
     it("should get all fantasy teams", async () => {
@@ -124,5 +127,16 @@ describe("Tests fantasy teams", () => {
             .expect(200)
 
         expect(response.body.pop().id_usuario).toEqual(id_usuario)
+    })
+
+    it("should add a new player to a fantasy team", async () => {
+        const response = await request(app)
+            .post("/api/fantasy_equipos/jugadores")
+            .send({ id_equipo_fantasy: id, id_jugador: id_jugador })
+            .set("Authorization", `Bearer ${token}`)
+            .expect(200)
+        
+        expect(response.body[0].id_jugador).toEqual(id_jugador)
+        expect(response.body[0].id_equipo_fantasy).toEqual(id)
     })
 })

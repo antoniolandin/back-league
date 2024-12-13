@@ -3,16 +3,16 @@ const handleError = require("../../utils/handleError")
 
 const postJugadorFantasy = async (req, res) => {
     try {
-        const { id_equipo } = req.params.id_equipo
-        const { id_jugador } = req.params.id_jugador
-        const { id_usuario } = req.user.id
+        const id_equipo_fantasy = req.body.id_equipo_fantasy
+        const id_jugador = req.body.id_jugador
+        const id_usuario = req.user.id
 
         if (!Jugadores.findByPk(id_jugador)) {
             handleError(res, "El jugador no existe", 404)
             return
         }
 
-        const equipo = await FantasyEquipos.findByPk(id_equipo)
+        const equipo = await FantasyEquipos.findByPk(id_equipo_fantasy)
 
         if (!equipo) {
             handleError(res, "El equipo no existe", 404)
@@ -24,16 +24,17 @@ const postJugadorFantasy = async (req, res) => {
             return
         }
 
-        const result = await equipo.addJugador(id_jugador).then(function (result) {
+        const result = await equipo.addJugadore(id_jugador).then(function (result) {
             if (result) {
                 res.status(200).json(result)
             } else {
                 handleError(res, "Error al añadir el jugador", 400)
             }
         }).catch(function (err) {
-            handleError(res, err, 400)
+            handleError(res, "Error en addJugador", 400)
         })
     } catch (error) {
+        console.log(error)
         handleError(res, error, 400)
     }
 }

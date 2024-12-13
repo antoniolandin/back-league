@@ -18,8 +18,6 @@ const authMiddleware = async (req, res, next) => {
         const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY, { algorithms: ["HS256"] })
         
         req.user = decoded
-        console.log("Decoded Token:", decoded)
-
         next();
     } catch (error) {
         handleError(res, error.message, 500)

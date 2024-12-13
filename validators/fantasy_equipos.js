@@ -12,9 +12,9 @@ const validatorCreateEquipoFantasy = [
 ]
 
 const validatorAddJugador = [
-    check('id_equipo').exists().notEmpty().isInt().withMessage("El id del equipo debe ser numérico"),
+    check('id_equipo_fantasy').exists().notEmpty().isInt().withMessage("El id del equipo debe ser numérico"),
     check('id_jugador').exists().notEmpty().isInt().withMessage("El id del jugador debe ser numérico"),
-    check('puntos_jornada').isInt().withMessage("Los puntos deben ser numéricos"),
+    check('puntos_jornada'),
     (req, res, next) => {
         return validateResults(req, res, next)
     }
