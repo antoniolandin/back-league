@@ -4,20 +4,26 @@
         "nombre": "Antonio",
         "primer_apellido": "Cabrera",
         "goles": 1,
-        "partidos_jugados": 2
+        "partidos_jugados": 2,
+        "grado": "MAIS",
+        "curso": 4
     },
     {
         "id_equipo": 7,
         "nombre": "Álvaro",
         "primer_apellido": "Salís",
         "goles": 0,
-        "partidos_jugados": 2
+        "partidos_jugados": 2,
+        "grado": "MAIS",
+        "curso": 4
     },
     {
         "id_equipo": 7,
         "nombre": "Antonio",
         "primer_apellido": "Pérez",
         "goles": 2,
-        "partidos_jugados": 2
+        "partidos_jugados": 2,
+        "grado": "MAIS",
+        "curso": 4
     }
 ]
