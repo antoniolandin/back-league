@@ -5,11 +5,6 @@ const getJugadores = async (req, res) => {
     try {
         const id_equipo = req.params.id
 
-        if (isNan(id_equipo)) {
-            handleError(res, "El id del equipo debe ser un número", 400)
-            return
-        }
-
         const equipo = await FantasyEquipos.findByPk(id_equipo)
         
         if (!equipo) {
@@ -17,9 +12,15 @@ const getJugadores = async (req, res) => {
             return
         }
 
-        const jugadores = await equipo.getJugadores()
-
-        console.log(jugadores)
+        const jugadores = await equipo.getJugadores().then(function(jugadores) {
+            if (jugadores.length > 0) {
+                res.status(200).json(jugadores)
+            } else {
+                handleError(res, "El equipo no tiene jugadores", 404)
+            }
+        }).catch(function(err) {
+            handleError(res, err, 400)
+        })
 
         //const result = Jugadores.findAll
     } catch (err) {

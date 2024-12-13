@@ -5,7 +5,7 @@ const router = express.Router()
 const { getEquipo, getEquipos, getJugadores, postEquipo, deleteEquipo, postJugadorFantasy } = require("../controllers/fantasy_equipos")
 
 router.get("/", getEquipos)
-router.get("/:id", getEquipo)
+router.get("/equipo", authMiddleware, getEquipo)
 router.get("/:id/jugadores", getJugadores)
 router.post("/", authMiddleware, validatorCreateEquipoFantasy, postEquipo)
 router.post("/jugadores", authMiddleware, validatorAddJugador, postJugadorFantasy)

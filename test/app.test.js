@@ -129,6 +129,15 @@ describe("Tests fantasy teams", () => {
         expect(response.body.pop().id_usuario).toEqual(id_usuario)
     })
 
+    it("should get user fantasy team", async () => {
+        const response = await request(app)
+            .get("/api/fantasy_equipos/equipo")
+            .set("Authorization", `Bearer ${token}`)
+            .expect(200)
+         
+        expect(response.body[0].nombre).toEqual("Fantasy Test")
+    })
+
     it("should add a new player to a fantasy team", async () => {
         const response = await request(app)
             .post("/api/fantasy_equipos/jugadores")
@@ -138,5 +147,14 @@ describe("Tests fantasy teams", () => {
         
         expect(response.body[0].id_jugador).toEqual(id_jugador)
         expect(response.body[0].id_equipo_fantasy).toEqual(id)
+    })
+
+    it("should get all players of a fantasy team", async () => {
+        const response = await request(app)
+            .get("/api/fantasy_equipos/" + id + "/jugadores/")
+            .set("Accept", "application/json")
+            .expect(200)
+        
+        expect(response.body.pop().id).toEqual(id_jugador)
     })
 })
