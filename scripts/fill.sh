@@ -7,6 +7,8 @@ API_URL="http://localhost:3500/api"
 
 script_dir=$(dirname "$(realpath "$0")")
 
+token=$(node ${script_dir}/generateToken.js)
+
 parse_json_array() {
     filename="${script_dir}/${1}"
     cat $filename | tr -d '\n' | tr -d '[' | tr -d '\t' | tr -d ']' | sed 's/},/}\n/g' | sed 's/$/\n/g'
@@ -31,9 +33,17 @@ parse_json_array json_files/jugadores.json | while read line; do
     curl -s -X POST -H "Content-Type: application/json" -d "$line" "${API_URL}/jugadores"
 done
 
+parse_json_array json_files/usuarios.json | while read line; do
+    curl -s -X POST -H "Content-Type: application/json" -d "$line" "${API_URL}/usuarios/register"
+done
+
 # post equipos fantasy
-#parse_json_array json_files/fantasy_equipos.json | while read line; do
-#    curl -s -X POST -H "Authorization: Bearer ${token}" -d "$line" "${API_URL}/fantasy_equipos"
-#done
+parse_json_array json_files/fantasy_equipos.json | while read line; do
+    curl -s -X POST -H "Authorization: Bearer $token" -H "Content-Type: application/json" -d "$line" "${API_URL}/fantasy_equipos"
+done
+
+parse_json_array json_files/jugadores_fantasy.json | while read line; do
+    curl -s -X POST -H "Authorization: Bearer $token" -H "Content-Type: application/json" -d "$line" "${API_URL}/fantasy_equipos/jugadores"
+done
 
 exit 0

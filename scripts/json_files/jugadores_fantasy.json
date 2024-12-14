@@ -1,0 +1,26 @@
+[
+    {
+        "id_jugador": 1,
+        "id_equipo_fantasy": 1
+    },
+    {
+        "id_jugador": 2,
+        "id_equipo_fantasy": 2
+    },
+    {
+        "id_jugador": 3,
+        "id_equipo_fantasy": 3
+    },
+    {
+        "id_jugador": 1,
+        "id_equipo_fantasy": 4
+    },
+    {
+        "id_jugador": 2,
+        "id_equipo_fantasy": 5
+    },
+    {
+        "id_jugador": 3,
+        "id_equipo_fantasy": 6
+    }
+]
