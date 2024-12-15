@@ -158,3 +158,57 @@ describe("Tests fantasy teams", () => {
         expect(response.body.pop().id).toEqual(id_jugador)
     })
 })
+
+describe("Tests partidos", () => {
+    
+    var id = null
+
+    it("should create a partido", async () => {
+        const response = await request(app)
+            .post("/api/partidos")
+            .send({ id_equipo_1: id_equipo, id_equipo_2: id_equipo, jornada: 4, fecha: "2025-01-01T17:00:00" })
+            .set("Accept", "application/json")
+            .expect(201)
+
+        expect(response.body.partido.jornada).toEqual(4)
+        id = response.body.partido.id
+    })
+
+    it("should create another partido", async () => {
+        const response = await request(app)
+            .post("/api/partidos")
+            .send({ id_equipo_1: id_equipo, id_equipo_2: id_equipo, jornada: 3, fecha: "2024-12-12T17:00:00" })
+            .set("Accept", "application/json")
+            .expect(201)
+        
+        expect(response.body.partido.jornada).toEqual(3)
+    })
+
+    it("should get all partidos", async () => {
+        const response = await request(app)
+            .get("/api/partidos")
+            .set("Accept", "application/json")
+            .expect(200)
+
+        expect(response.body.length).toEqual(2)
+    })
+
+    it("should get next partidos", async () => {
+        const response = await request(app)
+            .get("/api/partidos/proximos")
+            .set("Accept", "application/json")
+            .expect(200)
+
+        expect(response.body.length).toEqual(1)
+    })
+
+    it("should get equipos of partido", async () => {
+        const response = await request(app)
+            .get("/api/partidos/" + id)
+            .set("Accept", "application/json")
+            .expect(200)
+
+        console.log(response.body)
+        expect(response.body.length).toEqual(2)
+    })
+})

@@ -11,14 +11,15 @@ module.exports = {
       },
       jugado: {
         type: Sequelize.BOOLEAN,
-        allowNull: false
+        defaultValue: false
       },
       jornada: {
         type: Sequelize.INTEGER,
         allowNull: false
       },
       fecha: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        allowNull: false
       },
       createdAt: {
         allowNull: false,
