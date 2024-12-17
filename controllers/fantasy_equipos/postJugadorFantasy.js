@@ -1,38 +1,46 @@
-const { FantasyEquipos, Jugadores } = require("../../models")
+const { FantasyEquipos, Jugadores, Usuarios } = require("../../models")
 const handleError = require("../../utils/handleError")
 
 const postJugadorFantasy = async (req, res) => {
     try {
-        const id_equipo_fantasy = req.body.id_equipo_fantasy
         const id_jugador = req.body.id_jugador
         const id_usuario = req.user.id
 
-        if (!Jugadores.findByPk(id_jugador)) {
+        const jugador = await Jugadores.findByPk(id_jugador)
+
+        if (!jugador) {
             handleError(res, "El jugador no existe", 404)
             return
         }
 
-        const equipo = await FantasyEquipos.findByPk(id_equipo_fantasy)
+        const equipo = await FantasyEquipos.findOne({where: {id_usuario: id_usuario}})
 
         if (!equipo) {
             handleError(res, "El equipo no existe", 404)
             return
         }
 
-        if (equipo.id_usuario != id_usuario) {
-            handleError(res, "El equipo no pertenece al usuario", 400)
+        const usuario = await Usuarios.findByPk(id_usuario)
+        if (!usuario) {
+            handleError(res, "El usuario no existe", 404)
+            return
+        }
+        
+        const result = await equipo.addJugadore(id_jugador)
+        if (!result) {
+            handleError(res, "Error al añadir el jugador", 400)
             return
         }
 
-        const result = await equipo.addJugadore(id_jugador).then(function (result) {
-            if (result) {
-                res.status(200).json(result)
-            } else {
-                handleError(res, "Error al añadir el jugador", 400)
-            }
-        }).catch(function (err) {
-            handleError(res, "Error en addJugador", 400)
-        })
+        if (usuario.cartera < jugador.precio) {
+            handleError(res, "No tienes suficiente dinero", 400)
+            return
+        }
+
+        usuario.cartera -= jugador.precio
+        await usuario.save()
+
+        res.status(200).json(result)
     } catch (error) {
         console.log(error)
         handleError(res, error, 400)

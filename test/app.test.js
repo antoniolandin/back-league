@@ -199,7 +199,7 @@ describe("Tests partidos", () => {
             .get("/api/partidos")
             .set("Accept", "application/json")
             .expect(200)
-        console.log(response.body)
+        
         expect(response.body.length).toEqual(2)
     })
 
@@ -208,7 +208,7 @@ describe("Tests partidos", () => {
             .get("/api/partidos/proximos")
             .set("Accept", "application/json")
             .expect(200)
-        console.log(response.body)
+        
         expect(response.body.length).toEqual(1)
     })
 
