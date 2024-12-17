@@ -6,22 +6,22 @@
     },
     {
         "nombre": "María López",
-        "email": "maria.lopez@example.com",
+        "email": "maria@example.com",
         "contraseña": "password123"
     },
     {
         "nombre": "Carlos García",
-        "email": "carlos.garcia@example.com",
+        "email": "carlos@example.com",
         "contraseña": "securePass!789"
     },
     {
         "nombre": "Ana Torres",
-        "email": "ana.torres@example.com",
+        "email": "ana@example.com",
         "contraseña": "Torres2024!"
     },
     {
         "nombre": "Luis Fernández",
-        "email": "luis.fernandez@example.com",
+        "email": "luis@example.com",
         "contraseña": "Fernandez$456"
     }
 ]

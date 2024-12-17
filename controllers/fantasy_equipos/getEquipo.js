@@ -9,8 +9,7 @@ const getEquipo = async (req, res) => {
             handleError(res, "El usuario no existe", 404)
             return
         }
-
-        const equipo = await FantasyEquipos.findAll({where: {id_usuario: id_usuario}}).then(function(equipo) {
+        const equipo = await FantasyEquipos.findOne({where: {id_usuario: id_usuario}}).then(function(equipo) {
             if (!equipo) {
                 handleError(res, "No tienes equipos", 404)
                 return

@@ -7,12 +7,19 @@ API_URL="http://localhost:3500/api"
 
 script_dir=$(dirname "$(realpath "$0")")
 
-token=$(node ${script_dir}/generateToken.js)
-
 parse_json_array() {
     filename="${script_dir}/${1}"
-    cat $filename | tr -d '\n' | tr -d '[' | tr -d '\t' | tr -d ']' | sed 's/},/}\n/g' | sed 's/$/\n/g'
+    jq -c '.[]' "$filename"
 }
+
+declare -A usuarios
+usuarios=(
+    [1]="antonio@example.com"
+    [2]="maria@example.com"
+    [3]="carlos@example.com"
+    [4]="ana@example.com"
+    [5]="luis@example.com"
+)
 
 # Check if the server is up
 if ! curl -s $API_URL > /dev/null 2>&1; then
@@ -38,14 +45,23 @@ parse_json_array json_files/usuarios.json | while read line; do
 done
 
 # post equipos fantasy
-parse_json_array json_files/fantasy_equipos.json | while read line; do
+contador=1
+while read -r line; do
+    token=$(node ${script_dir}/generateToken ${contador} "${usuarios[$contador]}")
     curl -s -X POST -H "Authorization: Bearer $token" -H "Content-Type: application/json" -d "$line" "${API_URL}/fantasy_equipos"
-done
+    contador=$((contador+1))
+done < <(parse_json_array json_files/fantasy_equipos.json)
 
-parse_json_array json_files/jugadores_fantasy.json | while read line; do
+# post jugadores fantasy
+contador=1
+while read -r line; do
+    token=$(node ${script_dir}/generateToken.js ${contador} "${usuarios[$contador]}")
     curl -s -X POST -H "Authorization: Bearer $token" -H "Content-Type: application/json" -d "$line" "${API_URL}/fantasy_equipos/jugadores"
-done
+    contador=$((contador+1))
+done < <(parse_json_array json_files/jugadores_fantasy.json)
 
+
+# post partidos
 parse_json_array json_files/partidos.json | while read line; do
     curl -s -X POST -H "Content-Type: application/json" -d "$line" "${API_URL}/partidos"
 done

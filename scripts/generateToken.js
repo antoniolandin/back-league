@@ -1,9 +1,11 @@
 const jwt = require('jsonwebtoken');
 
+const parametros = process.argv.slice(2)
+
 // Payload
 const payload = {
-  id: 1,
-  email: "antonio@example.com",
+  id: parametros[0],
+  email: parametros[1],
 }
 
 // Generar el token

@@ -135,7 +135,7 @@ describe("Tests fantasy teams", () => {
             .set("Authorization", `Bearer ${token}`)
             .expect(200)
          
-        expect(response.body[0].nombre).toEqual("Fantasy Test")
+        expect(response.body.nombre).toEqual("Fantasy Test")
     })
 
     it("should add a new player to a fantasy team", async () => {
