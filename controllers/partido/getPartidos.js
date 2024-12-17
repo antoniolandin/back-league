@@ -5,7 +5,8 @@ const getPartidos = async (req, res) => {
     try {
         const partidos = await Partidos.findAll()
         
-        const json = [];
+        const json = []
+        var a = 0
 
         // Iterar sobre los partidos usando for...of
         for (const partido of partidos) {
@@ -23,9 +24,9 @@ const getPartidos = async (req, res) => {
                 // Determinar el equipo ganador
                 let equipo_ganador = null;
                 if (goles_1 > goles_2) {
-                    equipo_ganador = equipos[0];
+                    equipo_ganador = equipos[0].dataValues;
                 } else if (goles_2 > goles_1) {
-                    equipo_ganador = equipos[1];
+                    equipo_ganador = equipos[1].dataValues;
                 }
                 
                 partido_data = partido.dataValues
@@ -34,13 +35,16 @@ const getPartidos = async (req, res) => {
 
                 // Construir el objeto JSON
                 json.push({
-                    partido: partido_data,
-                    equipo_uno: equipo_1,
-                    equipo_dos: equipo_2,
-                    equipo_ganador: equipo_ganador,
+                    id: partido_data.id,
+                    equipo_uno: equipo_1.nombre,
+                    equipo_dos: equipo_2.nombre,
+                    equipo_ganador: equipo_ganador.nombre,
                     goles_uno: goles_1,
-                    goles_dos: goles_2
+                    goles_dos: goles_2,
+                    fecha: partido_data.fecha 
                 });
+
+                a = a + 1
             }
         }
 
