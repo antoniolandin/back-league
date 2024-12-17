@@ -184,13 +184,23 @@ describe("Tests partidos", () => {
         expect(response.body.partido.jornada).toEqual(3)
     })
 
+    it("should create a third partido", async () => {
+        const response = await request(app)
+            .post("/api/partidos")
+            .send({ id_equipo_1: id_equipo, id_equipo_2: id_equipo, goles_1: 2, goles_2: 1, jornada: 2, fecha: "2024-12-13T17:00:00" })
+            .set("Accept", "application/json")
+            .expect(201)
+        
+        expect(response.body.partido.jornada).toEqual(2)
+    })
+
     it("should get all partidos", async () => {
         const response = await request(app)
             .get("/api/partidos")
             .set("Accept", "application/json")
             .expect(200)
         console.log(response.body)
-        expect(response.body.length).toEqual(1)
+        expect(response.body.length).toEqual(2)
     })
 
     it("should get next partidos", async () => {

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./scripts/create_test_db.sh && jest --forceExit && npx sequelize-cli db:drop --env test",
+    "test": "./scripts/create_test_db.sh && jest --forceExit",
     "start": "nodemon app.js",
     "reset": "./scripts/reset.sh"
   },
