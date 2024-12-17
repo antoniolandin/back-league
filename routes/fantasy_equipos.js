@@ -9,7 +9,7 @@ router.get("/equipo", authMiddleware, getEquipo)
 router.get("/:id/jugadores", authMiddleware, getJugadores)
 router.post("/", authMiddleware, validatorCreateEquipoFantasy, postEquipo)
 router.post("/jugadores", authMiddleware, validatorAddJugador, postJugadorFantasy)
-router.delete("/:id", deleteEquipo)
+router.delete("/equipo", authMiddleware, deleteEquipo)
 router.delete("/jugadores/:id", authMiddleware, deleteJugadorFantasy)
 
 module.exports = router
