@@ -4,6 +4,7 @@ const getEquipo = require('./getEquipo.js')
 const getEquipos = require('./getEquipos.js')
 const deleteEquipo = require('./deleteEquipo.js')
 const postJugadorFantasy = require('./postJugadorFantasy.js')
+const deleteJugadorFantasy = require('./deleteJugadorFantasy.js')
 
 module.exports = {
     postEquipo,
@@ -11,5 +12,6 @@ module.exports = {
     getEquipo,
     getEquipos,
     deleteEquipo,
-    postJugadorFantasy
+    postJugadorFantasy,
+    deleteJugadorFantasy
 }

@@ -157,6 +157,15 @@ describe("Tests fantasy teams", () => {
         
         expect(response.body.pop().id).toEqual(id_jugador)
     })
+
+    it("should deleta a player from a fantasy team", async () => {
+        const response = await request(app)
+            .delete("/api/fantasy_equipos/jugadores/" + id_jugador)
+            .set("Authorization", `Bearer ${token}`)
+            .expect(200)
+
+        expect(response.body.msg).toEqual("Eliminado correctamente")
+    })
 })
 
 describe("Tests partidos", () => {
