@@ -28,12 +28,13 @@ const getProximosPartidos = async (req, res) => {
             const goles_dos = equipos[1]?.EquiposPartidos?.goles || 0
 
             json.push({
-                partido,
-                equipo_uno,
-                equipo_dos,
+                id: partido.id,
+                fecha: partido.fecha,
+                equipo_uno: equipo_uno.nombre,
+                equipo_dos: equipo_dos.nombre,
                 equipo_ganador: null,
-                goles_uno,
-                goles_dos
+                goles_uno: goles_uno,
+                goles_dos: goles_dos
             })
         }
         res.status(200).json(json)
