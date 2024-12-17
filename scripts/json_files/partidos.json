@@ -4,72 +4,64 @@
         "id_equipo_2": 2,
         "goles_1": 2,
         "goles_2": 1,
-        "jugado": true,
-        "fecha": "2024-12-05T17:00:00",
-        "jornada": 1
+        "jornada": 1,
+        "fecha": "2024-10-05T17:00:00"
     },
     {
         "id_equipo_1": 3,
         "id_equipo_2": 4,
         "goles_1": null,
         "goles_2": null,
-        "jugado": false,
-        "fecha": "2024-12-25T17:00:00",
-        "jornada": 2
+        "jornada": 2,
+        "fecha": "2024-12-25T17:00:00"
     },
     {
         "id_equipo_1": 5,
         "id_equipo_2": 6,
         "goles_1": 3,
         "goles_2": 3,
-        "jugado": true,
-        "fecha": "2024-12-10T17:00:00",
-        "jornada": 1
+        "jornada": 1,
+        "fecha": "2024-10-10T17:00:00"
     },
     {
         "id_equipo_1": 7,
         "id_equipo_2": 8,
         "goles_1": null,
         "goles_2": null,
-        "jugado": false,
-        "fecha": "2024-12-30T17:00:00",
-        "jornada": 3
+        "jornada": 1,
+        "fecha": "2024-10-30T17:00:00"
     },
     {
         "id_equipo_1": 2,
         "id_equipo_2": 3,
         "goles_1": 1,
         "goles_2": 0,
-        "jugado": true,
-        "fecha": "2024-11-15T17:00:00",
-        "jornada": 1
+        "jornada": 1,
+        "fecha": "2024-10-15T17:00:00"
     },
     {
         "id_equipo_1": 4,
         "id_equipo_2": 5,
         "goles_1": null,
         "goles_2": null,
-        "jugado": false,
-        "fecha": "2025-01-10T17:00:00",
-        "jornada": 4
+        "jornada": 4,
+        "fecha": "2025-01-10T17:00:00"
     },
     {
         "id_equipo_1": 6,
         "id_equipo_2": 7,
         "goles_1": 4,
         "goles_2": 2,
-        "jugado": true,
-        "fecha": "2024-11-20T17:00:00",
-        "jornada": 2
+        "jornada": 2,
+        "fecha": "2024-11-20T17:00:00"
     },
     {
         "id_equipo_1": 8,
         "id_equipo_2": 9,
         "goles_1": null,
         "goles_2": null,
-        "jugado": false,
-        "fecha": "2025-01-15T17:00:00",
-        "jornada": 5
+        "jornada": 5,
+        "fecha": "2025-01-15T17:00:00"
     }
 ]
 
