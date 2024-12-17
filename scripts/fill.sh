@@ -46,4 +46,8 @@ parse_json_array json_files/jugadores_fantasy.json | while read line; do
     curl -s -X POST -H "Authorization: Bearer $token" -H "Content-Type: application/json" -d "$line" "${API_URL}/fantasy_equipos/jugadores"
 done
 
+parse_json_array json_files/partidos.json | while read line; do
+    curl -s -X POST -H "Content-Type: application/json" -d "$line" "${API_URL}/partidos"
+done
+
 exit 0
