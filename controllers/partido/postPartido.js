@@ -5,7 +5,7 @@ const handleError = require("../../utils/handleError")
 
 const postPartido = async (req, res) => {
     try {
-        const { id_equipo_1, id_equipo_2 } = req.body
+        const { id_equipo_1, id_equipo_2, goles_1, goles_2 } = req.body
         const body = matchedData(req)
         
         const equipo_1 = await Equipos.findByPk(id_equipo_1)
@@ -26,8 +26,8 @@ const postPartido = async (req, res) => {
         
         try {
             await Promise.all([
-                partido.addEquipo(id_equipo_1),
-                partido.addEquipo(id_equipo_2),
+                partido.addEquipo(id_equipo_1, {through: {goles: goles_1}}),
+                partido.addEquipo(id_equipo_2, {through: {goles: goles_2}}),
             ])
         } catch (error) {
             handleError(res, error, 400)
