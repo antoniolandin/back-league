@@ -43,6 +43,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         defaultValue: 0
       },
+      photo: {
+        type: Sequelize.STRING,
+        defaultValue: ''
+      },
       precio: {
         type: Sequelize.FLOAT,
         defaultValue: 50

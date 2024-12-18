@@ -53,7 +53,7 @@ describe("Tests jugadores", () => {
     it("should register a new player", async () => {
         const response = await request(app)
             .post("/api/jugadores")
-            .send({ id_equipo: 1, nombre: "Alonso", primer_apellido: "Martinez", segundo_apellido: "Garcia", grado: "Licenciado", curso: "2" })
+            .send({ id_equipo: 1, nombre: "Alonso", primer_apellido: "Martinez", segundo_apellido: "Garcia", grado: "Licenciado", curso: "2", photo: "public/foto.jpg" })
             .set("Accept", "application/json")
             .expect(201)
         

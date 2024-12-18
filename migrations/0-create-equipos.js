@@ -43,8 +43,12 @@ module.exports = {
         defaultValue: 0
       },
       goles_diferencia: {
-                type: Sequelize.INTEGER,
-                defaultValue: 0
+        type: Sequelize.INTEGER,
+        defaultValue: 0
+      },
+      photo: {
+        type: Sequelize.STRING,
+        defaultValue: ''
       },
       createdAt: {
         allowNull: false,

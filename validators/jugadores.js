@@ -10,6 +10,7 @@ const validatorCreateJugador = [
     check('curso'),
     check('goles'),
     check('partidos_jugados'),
+    check('photo'),
     (req, res, next) => {
         return validateResults(req, res, next)
     }

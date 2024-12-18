@@ -276,7 +276,8 @@
         "goles": 2,
         "partidos_jugados": 2,
         "grado": "MAIS",
-        "curso": 4
+        "curso": 4,
+        "photo": "public/antoniop.jpg"
     },
     {
         "id_equipo": 7,
@@ -285,7 +286,8 @@
         "goles": 1,
         "partidos_jugados": 2,
         "grado": "MAIS",
-        "curso": 4
+        "curso": 4,
+        "photo": "public/antonioc.jpg"
     },
     {
         "id_equipo": 7,
@@ -294,7 +296,8 @@
         "goles": 0,
         "partidos_jugados": 2,
         "grado": "MAIS",
-        "curso": 4
+        "curso": 4,
+        "photo": "public/alvaro.jpg"
     },
     {
         "id_equipo": 7,
@@ -303,7 +306,8 @@
         "goles": 3,
         "partidos_jugados": 4,
         "grado": "MAIS",
-        "curso": 4
+        "curso": 4,
+        "photo": "public/luis.jpg"
     },
     {
         "id_equipo": 7,
@@ -312,25 +316,28 @@
         "goles": 2,
         "partidos_jugados": 3,
         "grado": "MAIS",
-        "curso": 4
+        "curso": 4,
+        "photo": "public/alejandro.jpg"
     },
     {
         "id_equipo": 7,
         "nombre": "Steve",
-        "primer_apellido": "",
+        "primer_apellido": "Sin",
         "goles": 1,
         "partidos_jugados": 2,
         "grado": "INSO",
-        "curso": 3
+        "curso": 3,
+        "photo": "public/steve.jpg"
     },
     {
         "id_equipo": 7,
         "nombre": "Temes",
-        "primer_apellido": "",
+        "primer_apellido": "Sin",
         "goles": 0,
         "partidos_jugados": 3,
         "grado": "ANIM",
-        "curso": 3
+        "curso": 3,
+        "photo": "public/temes.jpg"
     },
     {
         "id_equipo": 7,
@@ -339,34 +346,38 @@
         "goles": 1,
         "partidos_jugados": 4,
         "grado": "DIDI",
-        "curso": 2
+        "curso": 2,
+        "photo": "public/damian.jpg"
     },
     {
         "id_equipo": 7,
         "nombre": "Jerson",
-        "primer_apellido": "",
+        "primer_apellido": "Sin",
         "goles": 3,
         "partidos_jugados": 4,
         "grado": "DIPI",
-        "curso": 2
+        "curso": 2,
+        "photo": "public/jerson.jpg"
     },
     {
         "id_equipo": 7,
         "nombre": "Juanga",
-        "primer_apellido": "",
+        "primer_apellido": "Sin",
         "goles": 0,
         "partidos_jugados": 3,
         "grado": "INSO",
-        "curso": 3
+        "curso": 3,
+        "photo": "public/juanga.jpg"
     },
     {
         "id_equipo": 7,
         "nombre": "Kosh",
-        "primer_apellido": "",
+        "primer_apellido": "Sin",
         "goles": 2,
         "partidos_jugados": 2,
         "grado": "ANIM",
-        "curso": 4
+        "curso": 4,
+        "photo": "public/kosh.jpg"
     },
     {
         "id_equipo": 8,

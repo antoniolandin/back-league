@@ -30,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
     goles_favor: DataTypes.INTEGER,
     goles_contra: DataTypes.INTEGER,
     goles_diferencia: DataTypes.INTEGER,
+    photo: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Equipos',

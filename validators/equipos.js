@@ -10,6 +10,7 @@ const validatorCreateEquipo = [
     check('puntos'),
     check('goles_favor'),
     check('goles_contra'),
+    check('photo'),
     (req, res, next) => {
         return validateResults(req, res, next)
     }

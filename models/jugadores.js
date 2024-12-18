@@ -30,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
         curso: DataTypes.STRING,
         goles: DataTypes.INTEGER,
         partidos_jugados: DataTypes.INTEGER,
+        photo: DataTypes.STRING,
         precio: DataTypes.FLOAT
     }, {
         sequelize,
