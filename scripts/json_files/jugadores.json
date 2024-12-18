@@ -1,5 +1,284 @@
 [
     {
+        "id_equipo": 1,
+        "nombre": "Carlos",
+        "primer_apellido": "García",
+        "goles": 3,
+        "partidos_jugados": 4,
+        "grado": "MAIS",
+        "curso": 3
+    },
+    {
+        "id_equipo": 1,
+        "nombre": "Luis",
+        "primer_apellido": "Martínez",
+        "goles": 1,
+        "partidos_jugados": 3,
+        "grado": "INSO",
+        "curso": 3
+    },
+    {
+        "id_equipo": 1,
+        "nombre": "Ana",
+        "primer_apellido": "López",
+        "goles": 2,
+        "partidos_jugados": 3,
+        "grado": "ANIM",
+        "curso": 3
+    },
+    {
+        "id_equipo": 1,
+        "nombre": "Jorge",
+        "primer_apellido": "Hernández",
+        "goles": 0,
+        "partidos_jugados": 4,
+        "grado": "DIDI",
+        "curso": 3
+    },
+    {
+        "id_equipo": 1,
+        "nombre": "Marta",
+        "primer_apellido": "Ruiz",
+        "goles": 4,
+        "partidos_jugados": 4,
+        "grado": "DIPI",
+        "curso": 3
+    },
+    {
+        "id_equipo": 2,
+        "nombre": "Pedro",
+        "primer_apellido": "Sánchez",
+        "goles": 2,
+        "partidos_jugados": 2,
+        "grado": "MAIS",
+        "curso": 2
+    },
+    {
+        "id_equipo": 2,
+        "nombre": "Sofía",
+        "primer_apellido": "Gómez",
+        "goles": 1,
+        "partidos_jugados": 3,
+        "grado": "INSO",
+        "curso": 2
+    },
+    {
+        "id_equipo": 2,
+        "nombre": "Diego",
+        "primer_apellido": "Fernández",
+        "goles": 0,
+        "partidos_jugados": 2,
+        "grado": "ANIM",
+        "curso": 2
+    },
+    {
+        "id_equipo": 2,
+        "nombre": "Laura",
+        "primer_apellido": "Jiménez",
+        "goles": 3,
+        "partidos_jugados": 3,
+        "grado": "DIDI",
+        "curso": 2
+    },
+    {
+        "id_equipo": 2,
+        "nombre": "Clara",
+        "primer_apellido": "Pérez",
+        "goles": 1,
+        "partidos_jugados": 3,
+        "grado": "DIPI",
+        "curso": 2
+    },
+    {
+        "id_equipo": 3,
+        "nombre": "Juan",
+        "primer_apellido": "Romero",
+        "goles": 1,
+        "partidos_jugados": 3,
+        "grado": "MAIS",
+        "curso": 1
+    },
+    {
+        "id_equipo": 3,
+        "nombre": "Lucía",
+        "primer_apellido": "Navarro",
+        "goles": 2,
+        "partidos_jugados": 2,
+        "grado": "INSO",
+        "curso": 1
+    },
+    {
+        "id_equipo": 3,
+        "nombre": "Miguel",
+        "primer_apellido": "Ortiz",
+        "goles": 0,
+        "partidos_jugados": 4,
+        "grado": "ANIM",
+        "curso": 1
+    },
+    {
+        "id_equipo": 3,
+        "nombre": "Paula",
+        "primer_apellido": "Cruz",
+        "goles": 3,
+        "partidos_jugados": 4,
+        "grado": "DIDI",
+        "curso": 1
+    },
+    {
+        "id_equipo": 3,
+        "nombre": "Raúl",
+        "primer_apellido": "Gómez",
+        "goles": 1,
+        "partidos_jugados": 3,
+        "grado": "DIPI",
+        "curso": 1
+    },
+    {
+        "id_equipo": 4,
+        "nombre": "María",
+        "primer_apellido": "González",
+        "goles": 2,
+        "partidos_jugados": 4,
+        "grado": "MAIS",
+        "curso": 4
+    },
+    {
+        "id_equipo": 4,
+        "nombre": "Javier",
+        "primer_apellido": "Lara",
+        "goles": 0,
+        "partidos_jugados": 3,
+        "grado": "INSO",
+        "curso": 4
+    },
+    {
+        "id_equipo": 4,
+        "nombre": "Carmen",
+        "primer_apellido": "Gil",
+        "goles": 1,
+        "partidos_jugados": 2,
+        "grado": "ANIM",
+        "curso": 4
+    },
+    {
+        "id_equipo": 4,
+        "nombre": "Andrés",
+        "primer_apellido": "Blanco",
+        "goles": 3,
+        "partidos_jugados": 3,
+        "grado": "DIDI",
+        "curso": 4
+    },
+    {
+        "id_equipo": 4,
+        "nombre": "Claudia",
+        "primer_apellido": "Santos",
+        "goles": 1,
+        "partidos_jugados": 4,
+        "grado": "DIPI",
+        "curso": 4
+    },
+    {
+        "id_equipo": 5,
+        "nombre": "Enrique",
+        "primer_apellido": "Castro",
+        "goles": 1,
+        "partidos_jugados": 3,
+        "grado": "MAIS",
+        "curso": 2
+    },
+    {
+        "id_equipo": 5,
+        "nombre": "Alejandra",
+        "primer_apellido": "Ramírez",
+        "goles": 2,
+        "partidos_jugados": 3,
+        "grado": "INSO",
+        "curso": 2
+    },
+    {
+        "id_equipo": 5,
+        "nombre": "Héctor",
+        "primer_apellido": "Morales",
+        "goles": 0,
+        "partidos_jugados": 4,
+        "grado": "ANIM",
+        "curso": 2
+    },
+    {
+        "id_equipo": 5,
+        "nombre": "Victoria",
+        "primer_apellido": "Carmona",
+        "goles": 3,
+        "partidos_jugados": 3,
+        "grado": "DIDI",
+        "curso": 2
+    },
+    {
+        "id_equipo": 5,
+        "nombre": "Emilio",
+        "primer_apellido": "Serrano",
+        "goles": 1,
+        "partidos_jugados": 3,
+        "grado": "DIPI",
+        "curso": 2
+    },
+    {
+        "id_equipo": 6,
+        "nombre": "Gabriela",
+        "primer_apellido": "Vargas",
+        "goles": 2,
+        "partidos_jugados": 4,
+        "grado": "MAIS",
+        "curso": 1
+    },
+    {
+        "id_equipo": 6,
+        "nombre": "Rodrigo",
+        "primer_apellido": "Muñoz",
+        "goles": 1,
+        "partidos_jugados": 2,
+        "grado": "INSO",
+        "curso": 1
+    },
+    {
+        "id_equipo": 6,
+        "nombre": "Teresa",
+        "primer_apellido": "Rojas",
+        "goles": 0,
+        "partidos_jugados": 4,
+        "grado": "ANIM",
+        "curso": 1
+    },
+    {
+        "id_equipo": 6,
+        "nombre": "Fernando",
+        "primer_apellido": "Díaz",
+        "goles": 3,
+        "partidos_jugados": 3,
+        "grado": "DIDI",
+        "curso": 1
+    },
+    {
+        "id_equipo": 6,
+        "nombre": "Elena",
+        "primer_apellido": "Moreno",
+        "goles": 1,
+        "partidos_jugados": 3,
+        "grado": "DIPI",
+        "curso": 1
+    },
+    {
+        "id_equipo": 7,
+        "nombre": "Antonio",
+        "primer_apellido": "Pérez",
+        "goles": 2,
+        "partidos_jugados": 2,
+        "grado": "MAIS",
+        "curso": 4
+    },
+    {
         "id_equipo": 7,
         "nombre": "Antonio",
         "primer_apellido": "Cabrera",
@@ -19,11 +298,165 @@
     },
     {
         "id_equipo": 7,
-        "nombre": "Antonio",
-        "primer_apellido": "Pérez",
-        "goles": 2,
-        "partidos_jugados": 2,
+        "nombre": "Luis",
+        "primer_apellido": "Crespo",
+        "goles": 3,
+        "partidos_jugados": 4,
         "grado": "MAIS",
         "curso": 4
+    },
+    {
+        "id_equipo": 7,
+        "nombre": "Alejandro",
+        "primer_apellido": "Gómez",
+        "goles": 2,
+        "partidos_jugados": 3,
+        "grado": "MAIS",
+        "curso": 4
+    },
+    {
+        "id_equipo": 7,
+        "nombre": "Steve",
+        "primer_apellido": "",
+        "goles": 1,
+        "partidos_jugados": 2,
+        "grado": "INSO",
+        "curso": 3
+    },
+    {
+        "id_equipo": 7,
+        "nombre": "Temes",
+        "primer_apellido": "",
+        "goles": 0,
+        "partidos_jugados": 3,
+        "grado": "ANIM",
+        "curso": 3
+    },
+    {
+        "id_equipo": 7,
+        "nombre": "Damián",
+        "primer_apellido": "Villa",
+        "goles": 1,
+        "partidos_jugados": 4,
+        "grado": "DIDI",
+        "curso": 2
+    },
+    {
+        "id_equipo": 7,
+        "nombre": "Jerson",
+        "primer_apellido": "",
+        "goles": 3,
+        "partidos_jugados": 4,
+        "grado": "DIPI",
+        "curso": 2
+    },
+    {
+        "id_equipo": 7,
+        "nombre": "Juanga",
+        "primer_apellido": "",
+        "goles": 0,
+        "partidos_jugados": 3,
+        "grado": "INSO",
+        "curso": 3
+    },
+    {
+        "id_equipo": 7,
+        "nombre": "Kosh",
+        "primer_apellido": "",
+        "goles": 2,
+        "partidos_jugados": 2,
+        "grado": "ANIM",
+        "curso": 4
+    },
+    {
+        "id_equipo": 8,
+        "nombre": "Francisco",
+        "primer_apellido": "Delgado",
+        "goles": 2,
+        "partidos_jugados": 3,
+        "grado": "MAIS",
+        "curso": 4
+    },
+    {
+        "id_equipo": 8,
+        "nombre": "Isabel",
+        "primer_apellido": "Reyes",
+        "goles": 1,
+        "partidos_jugados": 3,
+        "grado": "INSO",
+        "curso": 4
+    },
+    {
+        "id_equipo": 8,
+        "nombre": "Samuel",
+        "primer_apellido": "Bravo",
+        "goles": 0,
+        "partidos_jugados": 2,
+        "grado": "ANIM",
+        "curso": 4
+    },
+    {
+        "id_equipo": 8,
+        "nombre": "Cristina",
+        "primer_apellido": "Molina",
+        "goles": 3,
+        "partidos_jugados": 3,
+        "grado": "DIDI",
+        "curso": 4
+    },
+    {
+        "id_equipo": 8,
+        "nombre": "Daniel",
+        "primer_apellido": "Suárez",
+        "goles": 1,
+        "partidos_jugados": 3,
+        "grado": "DIPI",
+        "curso": 4
+    },
+    {
+        "id_equipo": 9,
+        "nombre": "Patricia",
+        "primer_apellido": "Núñez",
+        "goles": 3,
+        "partidos_jugados": 4,
+        "grado": "MAIS",
+        "curso": 3
+    },
+    {
+        "id_equipo": 9,
+        "nombre": "Víctor",
+        "primer_apellido": "Cano",
+        "goles": 1,
+        "partidos_jugados": 2,
+        "grado": "INSO",
+        "curso": 3
+    },
+    {
+        "id_equipo": 9,
+        "nombre": "Silvia",
+        "primer_apellido": "Prieto",
+        "goles": 0,
+        "partidos_jugados": 3,
+        "grado": "ANIM",
+        "curso": 3
+    },
+    {
+        "id_equipo": 9,
+        "nombre": "Adrián",
+        "primer_apellido": "Peña",
+        "goles": 2,
+        "partidos_jugados": 3,
+        "grado": "DIDI",
+        "curso": 3
+    },
+    {
+        "id_equipo": 9,
+        "nombre": "Lorena",
+        "primer_apellido": "Castillo",
+        "goles": 1,
+        "partidos_jugados": 4,
+        "grado": "DIPI",
+        "curso": 3
     }
 ]
+
