@@ -47,19 +47,21 @@ done
 # post equipos fantasy
 contador=1
 while read -r line; do
-    token=$(node ${script_dir}/generateToken ${contador} "${usuarios[$contador]}")
+    token=$(node ${script_dir}/generateToken.js ${contador} "${usuarios[$contador]}")
     curl -s -X POST -H "Authorization: Bearer $token" -H "Content-Type: application/json" -d "$line" "${API_URL}/fantasy_equipos"
     contador=$((contador+1))
 done < <(parse_json_array json_files/fantasy_equipos.json)
 
 # post jugadores fantasy
-contador=1
-while read -r line; do
-    token=$(node ${script_dir}/generateToken.js ${contador} "${usuarios[$contador]}")
-    curl -s -X POST -H "Authorization: Bearer $token" -H "Content-Type: application/json" -d "$line" "${API_URL}/fantasy_equipos/jugadores"
-    contador=$((contador+1))
-done < <(parse_json_array json_files/jugadores_fantasy.json)
-
+for i in {1..5} 
+do
+    token=$(node "${script_dir}/generateToken.js" "${i}" "${usuarios[$i]}")
+    for j in {1..5} 
+    do
+        id_jugador=$((RANDOM%51 + 1))
+        curl -s -X POST -H "Authorization: Bearer $token" -H "Content-Type: application/json" -d "{\"id_jugador\":${id_jugador}, \"id_equipo_fantasy\":${i}}" "${API_URL}/fantasy_equipos/jugadores"
+    done
+done
 
 # post partidos
 parse_json_array json_files/partidos.json | while read line; do
