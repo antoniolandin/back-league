@@ -277,7 +277,7 @@
         "partidos_jugados": 2,
         "grado": "MAIS",
         "curso": 4,
-        "photo": "public/antoniop.jpeg"
+        "photo": "antoniop.jpeg"
     },
     {
         "id_equipo": 7,
@@ -287,7 +287,7 @@
         "partidos_jugados": 2,
         "grado": "MAIS",
         "curso": 4,
-        "photo": "public/antonioc.jpeg"
+        "photo": "antonioc.jpeg"
     },
     {
         "id_equipo": 7,
@@ -297,7 +297,7 @@
         "partidos_jugados": 2,
         "grado": "MAIS",
         "curso": 4,
-        "photo": "public/alvaro.jpeg"
+        "photo": "alvaro.jpeg"
     },
     {
         "id_equipo": 7,
@@ -307,7 +307,7 @@
         "partidos_jugados": 4,
         "grado": "MAIS",
         "curso": 4,
-        "photo": "public/luis.jpeg"
+        "photo": "luis.jpeg"
     },
     {
         "id_equipo": 7,
@@ -317,7 +317,7 @@
         "partidos_jugados": 3,
         "grado": "MAIS",
         "curso": 4,
-        "photo": "public/alejandro.jpeg"
+        "photo": "alejandro.jpeg"
     },
     {
         "id_equipo": 7,
@@ -327,7 +327,7 @@
         "partidos_jugados": 2,
         "grado": "INSO",
         "curso": 3,
-        "photo": "public/steve.jpeg"
+        "photo": "steve.jpeg"
     },
     {
         "id_equipo": 7,
@@ -337,7 +337,7 @@
         "partidos_jugados": 3,
         "grado": "ANIM",
         "curso": 3,
-        "photo": "public/temes.jpeg"
+        "photo": "temes.jpeg"
     },
     {
         "id_equipo": 7,
@@ -347,7 +347,7 @@
         "partidos_jugados": 4,
         "grado": "DIDI",
         "curso": 2,
-        "photo": "public/damian.jpeg"
+        "photo": "damian.jpeg"
     },
     {
         "id_equipo": 7,
@@ -357,7 +357,7 @@
         "partidos_jugados": 4,
         "grado": "DIPI",
         "curso": 2,
-        "photo": "public/jerson.jpeg"
+        "photo": "jerson.jpeg"
     },
     {
         "id_equipo": 7,
@@ -367,7 +367,7 @@
         "partidos_jugados": 3,
         "grado": "INSO",
         "curso": 3,
-        "photo": "public/juanga.jpeg"
+        "photo": "juanga.jpeg"
     },
     {
         "id_equipo": 7,
@@ -377,7 +377,7 @@
         "partidos_jugados": 2,
         "grado": "ANIM",
         "curso": 4,
-        "photo": "public/kosh.jpeg"
+        "photo": "kosh.jpeg"
     },
     {
         "id_equipo": 8,
