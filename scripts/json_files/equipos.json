@@ -5,7 +5,7 @@
         "puntos":12,
         "goles_diferencia":35,
         "partidos_jugados":4,
-        "photo":"public/megafire_fc.jpg"
+        "photo":"public/megafire_fc.jpeg"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "puntos":8,
         "goles_diferencia":36,
         "partidos_jugados":3,
-        "photo":"public/usad_champu_fc.jpg"
+        "photo":"public/usad_champu_fc.jpeg"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "puntos":7,
         "goles_diferencia":-2,
         "partidos_jugados":4,
-        "photo":"public/tigers_fc.jpg"
+        "photo":"public/tigers_fc.jpeg"
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "puntos":9,
         "goles_diferencia":7,
         "partidos_jugados":4,
-        "photo":"public/rayo_cayetano.jpg"
+        "photo":"public/rayo_cayetano.jpeg"
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "puntos":6,
         "goles_diferencia":7,
         "partidos_jugados":4,
-        "photo":"public/rcd_foonctions.jpg"
+        "photo":"public/rcd_foonctions.jpeg"
     },
     {
         "id": 6,
@@ -45,7 +45,7 @@
         "puntos":3,
         "goles_diferencia":-56,
         "partidos_jugados":4,
-        "photo":"public/raimon_mp3.jpg"
+        "photo":"public/raimon_mp3.jpeg"
     },
     {
         "id": 7,
@@ -53,7 +53,7 @@
         "puntos":9,
         "goles_diferencia":16,
         "partidos_jugados":3,
-        "photo":"public/wolfram_city.jpg"
+        "photo":"public/wolfram_city.jpeg"
     },
     {
         "id": 8,
@@ -61,7 +61,7 @@
         "puntos":3,
         "goles_diferencia":-2,
         "partidos_jugados":2,
-        "photo":"public/utad_lions.jpg"
+        "photo":"public/utad_lions.jpeg"
     },
     {
         "id": 9,
@@ -69,6 +69,6 @@
         "puntos":3,
         "goles_diferencia":-14,
         "partidos_jugados":3,
-        "photo":"public/liencres_fc.jpg"
+        "photo":"public/liencres_fc.jpeg"
     }
 ]
