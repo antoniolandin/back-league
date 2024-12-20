@@ -40,7 +40,7 @@ const postJugadorFantasy = async (req, res) => {
         usuario.cartera -= jugador.precio
         await usuario.save()
 
-        res.status(200).json(result)
+        res.status(200).json({jugador: result, cartera: usuario.cartera})
     } catch (error) {
         console.log(error)
         handleError(res, error, 400)
